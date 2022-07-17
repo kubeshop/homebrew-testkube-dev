@@ -5,21 +5,21 @@
 class Testkube < Formula
   desc "Testkube - your somewhat opinionated and friendly Kubernetes testing framework!"
   homepage "https://testkube.io"
-  version "0.0.1-gradle-executor"
+  version "1.3.0-beta001"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v0.0.1-gradle-executor/testkube_0.0.1-gradle-executor_macOS_x86_64.tar.gz"
-      sha256 "7d13f3da1856186ffa88fecdb5390c01b6a25f77ae828b80b1225d0c3eb340c1"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.0-beta001/testkube_1.3.0-beta001_macOS_x86_64.tar.gz"
+      sha256 "8a4c84914918b9797e1830a88afcde08fb756bb3a6b400934d6a15349bd57741"
 
       def install
         bin.install "kubectl-testkube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/testkube/releases/download/v0.0.1-gradle-executor/testkube_0.0.1-gradle-executor_macOS_arm64.tar.gz"
-      sha256 "854e6decf0797eb297da62887a1af331276bdece1dc64414e1bca84299bd0845"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.0-beta001/testkube_1.3.0-beta001_macOS_arm64.tar.gz"
+      sha256 "7456a9fd3b2859635a627b514491018f7113da06e60c4323fdbd7cf33e8d5b7a"
 
       def install
         bin.install "kubectl-testkube"
@@ -28,17 +28,17 @@ class Testkube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/testkube/releases/download/v0.0.1-gradle-executor/testkube_0.0.1-gradle-executor_Linux_arm64.tar.gz"
-      sha256 "80f92173c33d9b3e9390821046ea6dec78368ae67daef5dbd3ff896d5cf69ca1"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.0-beta001/testkube_1.3.0-beta001_Linux_x86_64.tar.gz"
+      sha256 "e2b72c8860c0567069708a5e665a4fb2b1a714020222e060a8bfbe56815324d0"
 
       def install
         bin.install "kubectl-testkube"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v0.0.1-gradle-executor/testkube_0.0.1-gradle-executor_Linux_x86_64.tar.gz"
-      sha256 "f669202531640afe18729ae8414608166100b3f1cd28501010b645bbb24dcb7a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubeshop/testkube/releases/download/v1.3.0-beta001/testkube_1.3.0-beta001_Linux_arm64.tar.gz"
+      sha256 "32a04f2590c2133c8311faf8c57846c9348cb6cd242abbdc8075f6614474398c"
 
       def install
         bin.install "kubectl-testkube"
