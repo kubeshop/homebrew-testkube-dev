@@ -5,7 +5,7 @@
 class Testkube < Formula
   desc "Testkube - your somewhat opinionated and friendly Kubernetes testing framework!"
   homepage "https://testkube.io"
-  version "1.16.29-beta2"
+  version "1.16.29-beta3"
   license "MIT"
 
   depends_on "helm"
@@ -13,8 +13,8 @@ class Testkube < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta2/testkube_1.16.29-beta2_Darwin_arm64.tar.gz"
-      sha256 "9776f56206f82a791353846551063eb17d0760506fd753aee9f8e5993abeb268"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta3/testkube_1.16.29-beta3_Darwin_arm64.tar.gz"
+      sha256 "40c11a540feec748e86fab49c71857a5add7e33e96711402193a5288b80d3283"
 
       def install
         bin.install "kubectl-testkube"
@@ -23,8 +23,8 @@ class Testkube < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta2/testkube_1.16.29-beta2_Darwin_x86_64.tar.gz"
-      sha256 "16954dbde3fdc7d17aaf3a0eb1b59ba9297115006d201186f07784a5840de570"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta3/testkube_1.16.29-beta3_Darwin_x86_64.tar.gz"
+      sha256 "6d3f16cbecf484f6bf09ef89a09f66b38d8f731f5ade57d7009b50c84e03402f"
 
       def install
         bin.install "kubectl-testkube"
@@ -36,8 +36,8 @@ class Testkube < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta2/testkube_1.16.29-beta2_Linux_arm64.tar.gz"
-      sha256 "933516527a4c0081c7f49efe7a7469b8805000f4c9ff15dee9626fd5954d3c1f"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta3/testkube_1.16.29-beta3_Linux_arm64.tar.gz"
+      sha256 "e6301e44e020723345b78790ff879db45c5b0713fff0fd979218bbd3dc8d9c07"
 
       def install
         bin.install "kubectl-testkube"
@@ -46,8 +46,8 @@ class Testkube < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta2/testkube_1.16.29-beta2_Linux_x86_64.tar.gz"
-      sha256 "a023b0b144b8e4042c8e0533f6b8e0d053650d5ba1a61ae685f92d95d739f963"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.16.29-beta3/testkube_1.16.29-beta3_Linux_x86_64.tar.gz"
+      sha256 "53b5d61701a5e27c81578350081b021035071baf2f3207802e78d056e43ae310"
 
       def install
         bin.install "kubectl-testkube"
