@@ -5,7 +5,7 @@
 class Testkube < Formula
   desc "Testkube - your somewhat opinionated and friendly Kubernetes testing framework!"
   homepage "https://testkube.io"
-  version "1.17.69-beta046"
+  version "1.17.69-beta047"
   license "MIT"
 
   depends_on "helm"
@@ -13,8 +13,8 @@ class Testkube < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta046/testkube_1.17.69-beta046_Darwin_x86_64.tar.gz"
-      sha256 "c2c9f002ec55e8c6a0757e51139e211c40cb86a3692acd2cb294355a935ae8a2"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta047/testkube_1.17.69-beta047_Darwin_x86_64.tar.gz"
+      sha256 "645982cb997934d1fb0e1435e8b8a7d0028c2c97e55eb217d9606ad674b622ed"
 
       def install
         bin.install "kubectl-testkube"
@@ -23,8 +23,8 @@ class Testkube < Formula
       end
     end
     on_arm do
-      url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta046/testkube_1.17.69-beta046_Darwin_arm64.tar.gz"
-      sha256 "2d1648581f60c863a758c4e0830ea8c15fcc23b4c7325ea66f62a51d04ad6007"
+      url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta047/testkube_1.17.69-beta047_Darwin_arm64.tar.gz"
+      sha256 "c3a45d1af9af52a5447f539d5f585942eb8bfe5d98cff3cad15fe753263555c1"
 
       def install
         bin.install "kubectl-testkube"
@@ -37,8 +37,8 @@ class Testkube < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta046/testkube_1.17.69-beta046_Linux_x86_64.tar.gz"
-        sha256 "934fb893f0999146e8009acfa73d0be5c11def50bb78f8ca34254951825f930e"
+        url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta047/testkube_1.17.69-beta047_Linux_x86_64.tar.gz"
+        sha256 "43ee54b277a259c53670fcd7ffdc0651981777e89435752d3c6ddd72db8f2b9d"
 
         def install
           bin.install "kubectl-testkube"
@@ -49,8 +49,8 @@ class Testkube < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta046/testkube_1.17.69-beta046_Linux_arm64.tar.gz"
-        sha256 "641c79bd2ab4ecd7c8adbb37166e3b6647e86feb25aad6508570d216fb114955"
+        url "https://github.com/kubeshop/testkube/releases/download/v1.17.69-beta047/testkube_1.17.69-beta047_Linux_arm64.tar.gz"
+        sha256 "a158f8e6f0de9a960a4cae6c9a1bbd62551dab03c29f8b20772dbca4b3faf4aa"
 
         def install
           bin.install "kubectl-testkube"
